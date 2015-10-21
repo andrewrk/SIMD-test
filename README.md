@@ -5,21 +5,21 @@ enabled. More difficult SIMD optimization problems were not explored.
 
 ```
 test-gcc-debug
-sum: 99897982687.000000  time: 0.441311
+sum: 99897982687.000000  time: 0.446810
 test-gcc-o3
-sum: 99897982687.000000  time: 0.156354
+sum: 99897982687.000000  time: 0.157358
 test-gcc-simd
-sum: 99897982687.000000  time: 0.156670
+sum: 99897982687.000000  time: 0.157701
 test-gcc-debug-simd
-sum: 99897982687.000000  time: 0.212490
+sum: 99897982687.000000  time: 0.213039
 test-clang-debug
-sum: 99897982687.000000  time: 0.436137
+sum: 99897982687.000000  time: 0.410983
 test-clang-o3
-sum: 99897982687.000000  time: 0.156231
+sum: 99897982687.000000  time: 0.159946
 test-clang-simd
-sum: 99897982687.000000  time: 0.156709
+sum: 99897982687.000000  time: 0.160412
 test-clang-debug-simd
-sum: 99897982687.000000  time: 0.212342
+sum: 99897982687.000000  time: 0.204966
 ```
 
 ## test-gcc-debug
