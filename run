@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# compile
+
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-gcc-debug -g test.c
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-gcc-o3 -g -O3 test.c
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-gcc-simd -g -O3 -D USE_SIMD test.c
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-gcc-debug-simd -g -D USE_SIMD test.c
+
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-clang-debug -g test.c
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-clang-o3 -g -O3 test.c
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-clang-simd -g -O3 -D USE_SIMD test.c
+gcc -std=c11 -D_POSIX_C_SOURCE=199309L -o test-clang-debug-simd -g -D USE_SIMD test.c
+
+# run
+echo "test-gcc-debug"
+./test-gcc-debug
+
+echo "test-gcc-o3"
+./test-gcc-o3
+
+echo "test-gcc-simd"
+./test-gcc-simd
+
+echo "test-gcc-debug-simd"
+./test-gcc-debug-simd
+
+echo "test-clang-debug"
+./test-clang-debug
+
+echo "test-clang-o3"
+./test-clang-o3
+
+echo "test-clang-simd"
+./test-clang-simd
+
+echo "test-clang-debug-simd"
+./test-clang-debug-simd
