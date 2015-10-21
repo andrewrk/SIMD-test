@@ -155,3 +155,12 @@ sum: 99897982687.000000  time: 0.212342
  201      E0F505
  202 018b 7E9F     		jle	.L9	#,
 ```
+
+## How to get that nice assembly output
+
+```
+gcc -std=c11 -S -D_POSIX_C_SOURCE=199309L -fverbose-asm -g -D USE_SIMD test.c -o test.s
+as -alhnd test.s
+```
+
+from http://stackoverflow.com/a/137479/432
